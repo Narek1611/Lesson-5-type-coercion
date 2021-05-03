@@ -66,4 +66,14 @@ console.log("a" > "A"); //true, poqratarery mecatateric arjeqov mec en
 console.log("a" > "z"); // false, aybubenov gnalov arjeqnery mecanum en
 //mnacac epqerum porcum a sarqi number, heto hamemati
 console.log(true > "-2");
-console.log(Number(undefined));
+
+//isNaN() u Number.isNan()
+
+//isNaN()-y stugum a ardyoq argumenty tiv a te che, orinak:
+isNaN("ponyfoo"); // <- true, 'ponyfoo'-n number chi, dra hamar true a talis
+isNaN({}); // <- true, qani vor datark objecty number chi
+
+//Number.isNaN()-y urish ban a anum, stugum a mejiny konkret henc NaN a te che
+//orinak ("zxx" / 3) esi talu a NaN, mer Number.isNaN()ij mej klini NaN, kta true
+console.log(Number.isNaN("zxx" / 3)); //tvec true
+console.log(Number.isNaN(NaN)); //eli true
